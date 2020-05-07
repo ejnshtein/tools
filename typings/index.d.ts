@@ -1,22 +1,20 @@
-export interface Lib {
-  argv (name: string): boolean
-  getArgv (name: string): string
-  buffer: Buffer
+export interface template {
   /**
-   * Sleep timer
-   * @param timeout Timeout in ms
+   * Format error
+   * @param e Error instance
    */
-  sleep (timeout: number): Promise<undefined>
-  template: {
-    /**
-     * Format error
-     * @param e Error instance
-     */
-    error (e: Error): string
-  }
+  error (e: Error): string
 }
 
-interface Buffer {
+export type argv = (name: string) => boolean
+export type getArgv = (name: string) => string
+/**
+ * Sleep timer
+ * @param timeout Timeout in ms
+ */
+export type sleep = (timeout: number) => Promise<undefined>
+
+export interface buffer {
   /**
    * Encode string unsing Buffer
    * @param text Text to encode
@@ -31,5 +29,3 @@ interface Buffer {
    */
   decode (text: string, encoding: string): string
 }
-
-export default Lib
