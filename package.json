@@ -1,0 +1,16 @@
+{
+  "name": "@ejnshtein/tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.cjs",
+  "type": "module",
+  "exports": {
+    "require": "index.cjs",
+    "import": "index.js"
+  },
+  "typings": "./typings/index.d.ts",
+  "keywords": [],
+  "author": "ejnshtein",
+  "license": "MIT",
+  "private": false
+}
