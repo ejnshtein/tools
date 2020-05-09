@@ -6,13 +6,13 @@ export interface template {
   error (e: Error): string
 }
 
-export type argv = (name: string) => boolean
-export type getArgv = (name: string) => string
+export function argv (name: string): boolean
+export function getArgv (name: string): string
 /**
  * Sleep timer
  * @param timeout Timeout in ms
  */
-export type sleep = (timeout: number) => Promise<undefined>
+export function sleep (timeout: number): Promise<undefined>
 
 export interface buffer {
   /**
